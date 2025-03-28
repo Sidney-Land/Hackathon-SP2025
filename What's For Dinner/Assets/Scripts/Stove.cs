@@ -6,6 +6,7 @@ public class Stove : Interactable
 {
     public Button junkFood, healthyFood;
     public GameObject clock;
+    public float cookingTime;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -51,8 +52,7 @@ public class Stove : Interactable
 
         Tic clockTic = clock.GetComponent<Tic>();
 
-        clockTic.maxTime = 10f;
-
+        clockTic.maxTime = cookingTime;
         EnableButtons(true);
     }
 }
