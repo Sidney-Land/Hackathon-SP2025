@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Stove : Interactable
 {
+    public GameObject clock;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -16,6 +18,10 @@ public class Stove : Interactable
 
     override public void Interact() 
     {
+        Instantiate(clock);
 
+        Tic clockTic = clock.GetComponent<Tic>();
+
+        clockTic.maxTime = 10f;
     }
 }

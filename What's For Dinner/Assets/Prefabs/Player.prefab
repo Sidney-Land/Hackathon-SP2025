@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5153605131438776086}
   - component: {fileID: 4210523084516074072}
   - component: {fileID: 1010301113936564283}
+  - component: {fileID: 4946670209046965259}
   m_Layer: 0
   m_Name: AnimationSheet_7
   m_TagString: Untagged
@@ -110,6 +111,42 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!58 &4946670209046965259
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 120438625937832841}
+  m_Enabled: 0
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_Radius: 1
 --- !u!1 &8321169928641038054
 GameObject:
   m_ObjectHideFlags: 0
@@ -121,6 +158,7 @@ GameObject:
   - component: {fileID: 9125595631168367785}
   - component: {fileID: 4060335823798343019}
   - component: {fileID: 2601838869613139804}
+  - component: {fileID: 2243866624725584865}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -187,3 +225,16 @@ MonoBehaviour:
   spriteRenderer: {fileID: 4210523084516074072}
   _Rigidbody2D: {fileID: 4060335823798343019}
   _Animator: {fileID: 1010301113936564283}
+--- !u!114 &2243866624725584865
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8321169928641038054}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04daa23920e8f19438fb62d9a070976b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerInteractRadius: {fileID: 4946670209046965259}
