@@ -17,7 +17,11 @@ public abstract class Interactable : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Interact();
+        if (Input.GetKey(KeyCode.E))
+        {
+            Interact();
+        }
+        
     }
 
     abstract public void  Interact();

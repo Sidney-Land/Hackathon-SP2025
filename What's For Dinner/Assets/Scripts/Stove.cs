@@ -1,4 +1,5 @@
 using System;
+using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -7,6 +8,8 @@ public class Stove : Interactable
     public Button junkFood, healthyFood;
     public GameObject clock;
     public float cookingTime;
+
+    public TextMeshProUGUI instructionText; 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -25,6 +28,7 @@ public class Stove : Interactable
         PlayerPrefs.SetFloat("HighScore", 1000);
 
         EnableButtons(false);
+        UpdateInstructions();
     }
 
     private void OnJunkFoodClick()
@@ -32,12 +36,18 @@ public class Stove : Interactable
         PlayerPrefs.SetFloat("HighScore", -1000);
 
         EnableButtons(false);
+        UpdateInstructions();
     }
 
     private void EnableButtons(bool buttonState)
     {
         junkFood.gameObject.SetActive(buttonState);
         healthyFood .gameObject.SetActive(buttonState);
+    }
+
+    private void UpdateInstructions()
+    {
+        instructionText.text = "Now press \"E\" on the table to eat your food!";
     }
 
     // Update is called once per frame
@@ -48,11 +58,6 @@ public class Stove : Interactable
 
     override public void Interact() 
     {
-        Instantiate(clock);
-
-        Tic clockTic = clock.GetComponent<Tic>();
-
-        clockTic.maxTime = cookingTime;
         EnableButtons(true);
     }
 }

@@ -16,6 +16,11 @@ public class GameManager : MonoBehaviour
     private void Update()
     {
         UpdateTimer();
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
     }
 
     private void UpdateTimer()
